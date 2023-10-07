@@ -1,0 +1,184 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.3;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+  body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+  }
+  .fb-1{
+   background-color: hsl(263, 55%, 52%);
+   background-image: url(bg-pattern-quotation.svg);
+   background-repeat: no-repeat;
+   background-position: left 90% top 0;
+   border-radius: 0.5rem;
+  }
+  .fb-2{
+    background-color: hsl(217, 19%, 35%);
+    border-radius:0.5rem;
+  }
+  .fb-3{
+    background-color: hsl(0, 0%, 100%);
+    border-radius:0.5rem;
+  }
+  .fb-4{
+    background-color: hsl(219, 29%, 14%);
+    border-radius:0.5rem;
+  }
+  .fb-5{
+    background-color: hsl(0, 0%, 100%);
+    border-radius:0.5rem;
+  }
+  img{
+    border-radius: 50%;
+    width:50px;
+  }
+  .img-clr{
+    border:4px solid hsl(263, 52%, 64%);
+    margin-right:1rem;
+  }
+  .img-clr2{
+    border:4px solid hsl(217, 17%, 40%);
+    margin-right:1rem;
+  }
+  .img-clr3{
+    border:4px solid hsl(0, 0%, 100%);
+    margin-right:1rem;
+  }
+  .img-clr5{
+    border:4px solid hsl(0, 0%, 100%);
+    margin-right:1rem;
+  }
+  .flex{
+    display: flex;
+    padding:1.5rem 1.5rem 0.5rem 1.5rem;
+  }
+  .par{
+    padding:0 1.5rem 1.5rem 1.5rem;
+  }
+  .name{
+    color:hsl(0, 0%, 100%);
+    font-size:0.9em;
+    font-weight:600;
+    line-height:1.7;
+  }
+  .name1{
+    color:hsl(217, 17%, 40%);
+    font-size:0.9rem;
+    font-weight: 600;
+    line-height:1.7;
+  }
+  .id{
+    color:hsl(0, 0%, 81%, 70%);
+    font-size:0.9em;
+    font-weight: 600;
+  }
+  h2{
+    color:hsl(0, 0%, 100%, 80%);
+    font-weight:600;
+  }
+  .bl-text{
+    color:hsl(217, 19%, 35%);
+  }
+  .desc{
+    color:hsl(0, 0%, 81%, 70%);
+    font-weight:600;
+    margin-top:1rem;
+  }
+  .desc1{
+    color:hsl(217, 17%, 40%, 50%);
+    font-weight: 600;
+    margin-top:1rem;
+  }
+  .grid{
+    padding:0;
+    margin:0;
+  }
+  .grid{
+    padding-block:2rem;
+    width: min(95%, 70rem);
+    margin-inline:auto;
+    display:grid;
+    gap:1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+  }
+  .fb-1{
+    grid-area: one;
+  }
+  .fb-2{
+    grid-area: two;
+  }
+  .fb-3{
+    grid-area: three;
+  }
+  .fb-4{
+    grid-area: four;
+  }
+  .fb-5{
+    grid-area: five;
+  }
+  @media (min-width: 30em){
+    .grid{
+      grid-template-areas:
+      'one one'
+      'two five'
+      'three five'
+      'four five';
+    }
+  }
+  @media (min-width: 50em){
+    .grid{
+      grid-template-areas:
+      'one one two five'
+      'three four four five';
+    }
+  }
+  
